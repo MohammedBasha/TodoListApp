@@ -2,14 +2,14 @@ import React from 'react';
 import './TodoItems.css';
 
 const TodoItems = (props) => {
-    const {items} = props,
+    const {items, deleteItem} = props,
         ListItems = items.map((item, index) => {
             return (
                 <div key={item.id} className="todoitem">
                     <span className="item-index">{++index}</span>
                     <span className="item-name">{item.name}</span>
                     <span className="item-age">{item.age}</span>
-                    <span className="item-action">&times;</span>
+                    <span className="item-action" onClick={_ => deleteItem(item.id)}>&times;</span>
                 </div>
             )
         });

@@ -15,11 +15,20 @@ class App extends Component {
     }
   }
 
+  deleteItem = (id) => {
+    let items = this.state.items,
+        i = items.findIndex(item => item.id === id);
+    items.splice(i, 1);
+    this.setState({
+      items: items
+    });
+  }
+
   render() {
     return (
       <div className="todolist-app">
         Todo List Application
-        <TodoItems items={this.state.items} />
+        <TodoItems items={this.state.items} deleteItem={this.deleteItem} />
         <AddItem />
       </div>
     );
