@@ -16,12 +16,15 @@ class App extends Component {
   }
 
   deleteItem = (id) => {
-    let items = this.state.items,
-        i = items.findIndex(item => item.id === id);
-    items.splice(i, 1);
-    this.setState({
-      items: items
-    });
+    // let items = this.state.items,
+    //     i = items.findIndex(item => item.id === id);
+    // items.splice(i, 1);
+    // this.setState({
+    //   items: items
+    // });
+
+    let items = this.state.items.filter(item => item.id !== id);
+    this.setState({items});
   }
 
   render() {
