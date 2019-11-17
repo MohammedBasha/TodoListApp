@@ -3,16 +3,24 @@ import './TodoItems.css';
 
 const TodoItems = (props) => {
     const {items, deleteItem} = props,
-        ListItems = items.map((item, index) => {
-            return (
-                <div key={item.id} className="todoitem">
-                    <span className="item-index">{++index}</span>
-                    <span className="item-name">{item.name}</span>
-                    <span className="item-age">{item.age}</span>
-                    <span className="item-action" onClick={_ => deleteItem(item.id)}>&times;</span>
-                </div>
-            )
-        });
+        ListItems = items.length ? (
+            items.map((item, index) => {
+                return (
+                    <div key={item.id} className="todoitem">
+                        <span className="item-index">{++index}</span>
+                        <span className="item-name">{item.name}</span>
+                        <span className="item-age">{item.age}</span>
+                        <span className="item-action" onClick={_ => deleteItem(item.id)}>
+                            &times;
+                        </span>
+                    </div>
+                )
+            })
+        ) : (
+            <div className="todoitem">
+                <span>There is no items to show.</span>
+            </div>
+        );
 
     return (
         <div className="todoitems-wrapper">
