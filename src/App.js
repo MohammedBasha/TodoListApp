@@ -8,9 +8,9 @@ class App extends Component {
     super(props);
     this.state = {
       items: [
-        {id: 1, name: 'Mohammed', age: 30},
-        {id: 2, name: 'Ahmed', age: 28},
-        {id: 3, name: 'Mahmoud', age: 26}
+        {id: 1, name: 'Mohammed', age: '30'},
+        {id: 2, name: 'Ahmed', age: '28'},
+        {id: 3, name: 'Mahmoud', age: '26'}
       ]
     }
   }
@@ -27,12 +27,19 @@ class App extends Component {
     this.setState({items});
   }
 
+  addItem = item => {
+    item.id = this.state.items.length + 1;
+    let items = this.state.items;
+    items.push(item);
+    this.setState({items});
+  }
+
   render() {
     return (
       <div className="todolist-app">
         Todo List Application
         <TodoItems items={this.state.items} deleteItem={this.deleteItem} />
-        <AddItem />
+        <AddItem addItem={this.addItem} />
       </div>
     );
   }

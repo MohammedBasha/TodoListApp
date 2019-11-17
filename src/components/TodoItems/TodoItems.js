@@ -10,7 +10,7 @@ const TodoItems = (props) => {
                         <span className="item-index">{++index}</span>
                         <span className="item-name">{item.name}</span>
                         <span className="item-age">{item.age}</span>
-                        <span className="item-action" onClick={_ => deleteItem(item.id)}>
+                        <span className="item-action" onClick={_ => deleteItem(item.id)} title="Delete Item">
                             &times;
                         </span>
                     </div>
