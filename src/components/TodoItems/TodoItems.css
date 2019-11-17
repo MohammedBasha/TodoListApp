@@ -1,0 +1,12 @@
+.todoitems-wrapper {
+    display: table;
+    margin: auto;
+}
+
+.todoitem {
+    display: table-row;
+}
+
+.todoitem > span {
+    display: table-cell;
+}
