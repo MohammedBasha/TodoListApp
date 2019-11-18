@@ -1,3 +1,3 @@
 ## Todo List Application
 
-Simple todo lias application using react.
+Simple todo list application using react.
