@@ -37,7 +37,7 @@ class App extends Component {
   render() {
     return (
       <div className="todolist-app">
-        Todo List Application
+        <h1>Todo List Application</h1>
         <TodoItems items={this.state.items} deleteItem={this.deleteItem} />
         <AddItem addItem={this.addItem} />
       </div>

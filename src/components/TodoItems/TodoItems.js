@@ -25,10 +25,10 @@ const TodoItems = (props) => {
     return (
         <div className="todoitems-wrapper">
             <div className="todoitem todoitem-header">
-                <span className="item-index-header">No.</span>
-                <span className="item-name-header">Name</span>
-                <span className="item-age-header">Age</span>
-                <span className="item-action-header">Action</span>
+                <h4 className="item-index-header">No.</h4>
+                <h4 className="item-name-header">Name</h4>
+                <h4 className="item-age-header">Age</h4>
+                <h4 className="item-action-header">Action</h4>
             </div>
             {ListItems}
         </div>

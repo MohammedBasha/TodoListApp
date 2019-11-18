@@ -1,0 +1,23 @@
+.additem-wrapper form {
+    display: flex;
+}
+
+.additem-wrapper input {
+    border: 0;
+    padding: 7px 10px;
+}
+
+.additem-wrapper input[type='text'] {
+    flex: 2.5;
+    border-right: 1px solid #ccc;
+}
+
+.additem-wrapper input[type='text']:nth-child(2) {
+    border-right: 0;
+}
+
+.additem-wrapper input[type='submit'] {
+    flex: .9;
+    cursor: pointer;
+    font-size: 1em;
+}
